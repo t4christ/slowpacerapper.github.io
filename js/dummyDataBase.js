@@ -109,4 +109,6 @@ const pageList = document.querySelector(".property_image img");
 pageList.src = getDb;
 pageList.parentElement.style.width =
   window.innerWidth - window.innerWidth * 0.1 + "px";
-pageList.style.height = window.innerWidth - window.innerWidth * 0.1 + "px";
+if (window.innerWidth < 450) {
+  pageList.style.height = window.innerWidth - window.innerWidth * 0.1 + "px";
+}
