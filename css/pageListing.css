@@ -14,12 +14,12 @@
 .listings .property_image {
   margin: 0 auto;
   max-width: 500px;
-  min-width: 100% !important;
   max-height: 500px;
   overflow: hidden;
 }
 .listings .property_image img {
   width: 100%;
+  height:500px;
   object-fit: cover;
 }
 
