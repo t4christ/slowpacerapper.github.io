@@ -1117,7 +1117,7 @@ body {
   color: var(--white);
   height: 2.5rem;
   border: none;
-  border-bottom: 2px solid var(--white);
+  border-bottom: 1px solid var(--white);
   outline: none;
   background-color: transparent;
   padding: 0.5rem;
@@ -1140,10 +1140,37 @@ body {
 .contact_details .contact_form form button {
   width: max-content;
   padding: 0.5rem 1.25rem;
-  background-color: var(--primary-color);
-  border: none;
+  background-color:transparent;
+  border: 1px solid white;
   color: var(--white);
   border-radius: 5px;
+  overflow:hidden;
+}
+
+.contact_details .contact_form form button::before {
+  content: "";
+  position: absolute;
+  background-color: #cf2e2e;
+  left: 0%;
+  right: 0%;
+  top: 0;
+  bottom: 100%;
+  transition-duration: 0.4s;
+}
+
+.contact_details .contact_form form button:hover::before {
+  bottom: 0%;
+}
+.contact_details .contact_form form button::after {
+  position: absolute;
+  content: "Learn more";
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ================== footer =================  */
