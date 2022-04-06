@@ -51,7 +51,7 @@ a {
 body {
   width: 100vw;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 * {
@@ -71,7 +71,7 @@ body {
   position: fixed;
   z-index: 1000000;
   width: 100vw;
-  background-color: var(--primary-color);
+  background-color: black;
   height: 100vh;
   display: grid;
   place-content: center;
@@ -80,26 +80,17 @@ body {
   pointer-events: none;
 }
 
-.loading_animation h3 {
-  color: var(--fancy-color);
-  font-size: var(--largest-font);
-  transform: translateX(-100vw);
+.loading_animation img {
   transition-timing-function: cubic-bezier(0.32, -0.16, 0.39, 1.65);
   transition-duration: 0.6s;
-}
-
-.loading_animation p {
-  color: #b3b3b3;
-  text-align: center;
-  transform: translateX(-100vw);
-  transition-delay: 0.6s;
-  transition-duration: 0.6s;
-  transition-timing-function: cubic-bezier(0.32, -0.16, 0.39, 1.65);
+  transform: translateX(-100%);
+  width: 100%;
+  height: 100%;
 }
 
 /* ================= The nav bar styles =============== */
 .nav_bar {
-  background-color: var(--primary-color-transparent);
+  background-color: black;
   position: fixed;
   display: flex;
   align-items: center;
@@ -139,6 +130,12 @@ body {
   color: var(--fancy-color);
   font-weight: var(--thick-weight);
   font-size: var(--normal-font);
+}
+
+.nav_bar .nav_contents .logo a img {
+  width: 13rem;
+  height: 3rem;
+  object-fit: cover;
 }
 
 .nav_bar .nav_contents .nav_links {
@@ -235,6 +232,7 @@ body {
 }
 
 .hero_section .hero_images {
+  padding-top: 5rem;
   width: 100%;
   height: 80vh;
   display: grid;
@@ -255,7 +253,7 @@ body {
   background-color: var(--primary-color);
   color: #8a8989;
   width: 100%;
-  padding: 2rem 0;
+  padding: 3.5rem 0;
   transition-duration: 1s;
   transform: translateX(-50%);
   opacity: 0;
@@ -614,7 +612,7 @@ body {
 
 /* =================== Values ===================  */
 .values {
-  padding: 2rem 0;
+  padding: 8rem 0;
   width: 100%;
   background-color: var(--primary-color);
   color: var(--white);
@@ -968,7 +966,7 @@ body {
   display: grid;
   background-color: var(--primary-color);
   gap: 1.25rem;
-  padding: 4rem 0;
+  padding: 8rem 0;
 }
 
 .about_content {
@@ -1037,6 +1035,8 @@ body {
   display: grid;
   min-width: 300px;
   background-color: var(--primary-color);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   gap: 5rem;
   padding: 2rem 1rem;
   place-content: center;
@@ -1105,19 +1105,23 @@ body {
 .contact_details .contact_form {
   min-width: 300px;
   flex: 1;
-  background-color: var(--fancy-color-two);
+  background-color: transparent;
 }
 .contact_details .contact_form form {
   padding: 3rem;
+  height: 100%;
   display: grid;
   gap: 1rem;
+  border: 0.5px solid #5e5c5c;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .contact_details .contact_form form input {
-  color: var(--white);
+  color: #8a8989;
   height: 2.5rem;
   border: none;
-  border-bottom: 2px solid var(--white);
+  border-bottom: 0.5px solid #5e5c5c;
   outline: none;
   background-color: transparent;
   padding: 0.5rem;
@@ -1125,14 +1129,16 @@ body {
 
 .contact_details .contact_form form input::placeholder,
 .contact_details .contact_form form textarea::placeholder {
-  color: var(--white);
+  color: #5e5c5c;
 }
 
 .contact_details .contact_form form textarea {
   background-color: transparent;
-  border: 2px solid var(--white);
+  border: 0.5px solid #5e5c5c;
   border-radius: 5px;
   padding: 0.5rem;
+  color: #5e5c5c;
+  outline: none;
   resize: none;
   min-height: 150px;
 }
@@ -1140,10 +1146,17 @@ body {
 .contact_details .contact_form form button {
   width: max-content;
   padding: 0.5rem 1.25rem;
-  background-color: var(--primary-color);
-  border: none;
-  color: var(--white);
+  background-color: transparent;
+  border: 0.5px solid #5e5c5c;
+  color: #5e5c5c;
   border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact_details .contact_form form button:hover {
+  background-color: var(--fancy-color-two);
+  color: white;
+  border: none;
 }
 
 /* ================== footer =================  */

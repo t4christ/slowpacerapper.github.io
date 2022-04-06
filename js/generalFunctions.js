@@ -20,12 +20,10 @@ navLinksLinks.forEach((link) => {
 // ================ loading Animation ================
 
 const loadingAnimation = document.querySelector(".loading_animation"),
-  loadingAnimationHeading = document.querySelector(".loading_animation h3"),
-  loadingAnimationSubtitle = document.querySelector(".loading_animation p"),
+  loadingAnimationHeading = document.querySelector(".loading_animation img"),
   body = document.querySelector("body");
 
 loadingAnimationHeading.style.transform = `translate(${lerp(0, 0, 0.1)}%)`;
-loadingAnimationSubtitle.style.transform = `translate(${lerp(0, 0, 0.1)}%)`;
 window.onload = () => {
   loadingAnimation.style.opacity = lerp(0, 0, 0.005);
   body.style.overflow = "auto";
