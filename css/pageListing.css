@@ -13,13 +13,14 @@
 
 .listings .property_image {
   margin: 0 auto;
-  min-width: 100% !important;
+  max-width: 100%;
   max-height: 500px;
   overflow: hidden;
 }
 .listings .property_image img {
   width: 100%;
-  height: calc(1 * 500px);
+  height:500px;
+  object-fit: cover;
 }
 
 .summary {
